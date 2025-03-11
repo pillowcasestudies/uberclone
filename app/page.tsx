@@ -17,7 +17,7 @@ export default function Home() {
 
         <UberLogo src="https://i.ibb.co/84stgjq/uber-technologies-new-20218114.jpg" />
         <Profile>
-         <Name>Barry Weinstein</Name>
+         <Name>Barry Weinstein.</Name>
          <UserImage src="/volunteer.jpg" />
          </Profile>
         </Header>

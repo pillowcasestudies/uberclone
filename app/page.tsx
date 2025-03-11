@@ -13,7 +13,16 @@ export default function Home() {
 
   return (
     <Wrapper>
-      <Map pickupCoordinates={pickupCoordinates ?? null} dropoffCoordinates={dropoffCoordinates ?? null} />
+        {/* Only render Map when coordinates are available */}
+  {pickupCoordinates && dropoffCoordinates ? (
+    <Map 
+      pickupCoordinates={pickupCoordinates} 
+      dropoffCoordinates={dropoffCoordinates} 
+    />
+  ) : (
+    <div>Loading map...</div>  {/* Loading state while coordinates are being fetched */}
+  )
+
       <ActionItems>
         <Header>
         <Weather /> 

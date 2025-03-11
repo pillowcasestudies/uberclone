@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import tw from "tailwind-styled-components";
 import Map from "./components/Map";
 import Link from 'next/link';
@@ -7,10 +7,13 @@ import Weather from "./components/Weather";
 
 
 export default function Home() {
+  
+  const [pickupCoordinates, setPickupCoordinates] = useState<any>(null);
+  const [dropoffCoordinates, setDropoffCoordinates] = useState<any>(null);
 
   return (
     <Wrapper>
-      <Map pickupCoordinates={""} dropoffCoordinates={""} />
+      <Map pickupCoordinates={pickupCoordinates ?? null} dropoffCoordinates={dropoffCoordinates ?? null} />
       <ActionItems>
         <Header>
         <Weather /> 

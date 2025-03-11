@@ -13,8 +13,7 @@ export default function Home() {
 
   return (
     <Wrapper>
-      
-      
+      <Map pickupCoordinates={pickupCoordinates ?? null} dropoffCoordinates={dropoffCoordinates ?? null} />
       
       <ActionItems>
         <Header>

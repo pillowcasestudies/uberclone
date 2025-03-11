@@ -13,7 +13,7 @@ mapboxgl.accessToken =
 
 const ConfirmPage: React.FC = () => {
     return (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div>Loading....</div>}>
             <ConfirmContent />
         </Suspense>
     );
